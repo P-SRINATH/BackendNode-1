@@ -1,0 +1,53 @@
+POST http://localhost:4000/customer-api/customer
+Content-Type: application/json
+
+{
+    "customer_name":"Pavan",
+    "customer_email":"Pavan@gmail.com",
+    "address":{
+        "street":"Pavanstreet",
+        "city":"hyderabad",
+        "state":"telangana",
+        "pincode":500062
+    }
+}
+###
+POST http://localhost:4000/product-api/product
+Content-Type: application/json
+
+{
+    "product_name":"Bench",
+    "product_price":100
+}
+###
+POST http://localhost:4000/customer-api/customer-review
+Content-Type: application/json
+
+{
+    "customer_id":4,
+    "product_id":5,
+    "review_date":"2021-10-10",
+    "review_desc":"This is review"
+}
+###
+POST http://localhost:4000/customer-api/customer-order
+Content-Type: application/json
+
+{
+    "order_id":3,
+    "order_date":"2020-10-12",
+    "customer_id":2,
+    "product_id":3
+}
+###
+GET  http://localhost:4000/customer-api/customers
+###
+GET http://localhost:4000/product-api/products
+###
+GET http://localhost:4000/customer-api/getcustomer/1
+###
+GET http://localhost:4000/customer-api/getcustomer-reviews
+###
+GET http://localhost:4000/customer-api/customer-orders/2
+###
+GET http://localhost:4000/customer-api/getaddress
